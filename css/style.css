@@ -27,35 +27,38 @@ p {
 
 p b {
     text-transform: uppercase;
+    font-weight: bold;
 }
 
 form {
     overflow: hidden;
     clear: both;
-    margin: 0 0 60px 0;
+    margin: 0 auto;
+    margin-bottom: 75px;
 }
 
 #status {
-    margin: 0px 0 60px 0;
+    margin: 60px 0 75px 0;
     overflow: hidden;
     clear: both;
 }
 
 #status-base {
-    width: 100%;
+    width: 90%;
     height:  20px;
     border:  2px solid #ffea00;
     display: block;
     position: relative;
+    margin: 0 auto;
 }
 #status-bar {
-    width: 80%;
+    width: 70%;
     height:  20px;
     background: #ffea00;
     display: block;
     position: absolute;
-    top: -2px;
-    left: -2px;
+    top: 0;
+    left: 0;
 }
 
 #status-text {
@@ -67,7 +70,7 @@ form {
 #status-text:before {
     position: absolute;
     top:0;
-    left:0;
+    left:5%;
     content: "0%";
     font-size: 16px;
 }
@@ -75,19 +78,19 @@ form {
 #status-text:after {
     position: absolute;
     top:0;
-    left:0;
+    left:90%;
     content: "100%";
     font-size: 16px;
 }
 
 .row {
-    margin: 0 -10px;
+    margin: 0 auto;
 }
 
 .one-third {
     float: left;
-    width: 33.33%;
-    padding: 0 10px;
+    width: 27.3%;
+    padding: 0 20px;
 }
 
 input[type="text"],input[type="email"] {
@@ -99,12 +102,14 @@ input[type="text"],input[type="email"] {
     background: transparent;
     color: #ffffff;
     margin: 0 0 20px 0;
+    box-sizing: border-box;
 }
 
 input[type="submit"] {
     width: 100%;
     background: #ffffff;
     padding: 10px;
+    margin: 0 0 20px 0;
     font-size: 16px;
     font-family: inherit;
     color: #0b0e17;
@@ -120,6 +125,7 @@ input[type="submit"] {
 ul {
     overflow: hidden;
     margin: 0 0 30px 0;
+    padding-left: 0;
 }
 
 ul li {
@@ -153,7 +159,7 @@ ul li a{
 
 @media only screen and (max-width: 640px) {
     .one-third{
-        width: 100%;
+        width: 90%;
         float: none;
     }
     
@@ -168,6 +174,23 @@ ul li a{
     ul li a{
     width: 35px;
     height: 35px;
+    margin: 0 5px;
+    background-size: 15px auto;
+}
+}
+
+@media only screen and (max-width: 420px) {
+    #center-box {
+        width: 75%;
+        padding: 40px 25px 0 25px;
+    }
+    #status-text:after {
+    position: absolute;
+    left:83%;
+}
+        ul li a{
+    width: 25px;
+    height: 25px;
     margin: 0 5px;
     background-size: 15px auto;
 }
