@@ -1,3 +1,9 @@
+ *, *:before, *:after {
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+
 body {
     background: #060911 url(../img/bg.jpg) top center no-repeat;
     font-size: 20px;
@@ -33,8 +39,7 @@ p b {
 form {
     overflow: hidden;
     clear: both;
-    margin: 0 auto;
-    margin-bottom: 75px;
+    margin: 0 0 75px 0;
 }
 
 #status {
@@ -44,16 +49,16 @@ form {
 }
 
 #status-base {
-    width: 90%;
+    width: 100%;
     height:  20px;
     border:  2px solid #ffea00;
     display: block;
     position: relative;
-    margin: 0 auto;
 }
+
 #status-bar {
-    width: 70%;
-    height:  20px;
+    width: 80%;
+    height:  18px;
     background: #ffea00;
     display: block;
     position: absolute;
@@ -70,7 +75,7 @@ form {
 #status-text:before {
     position: absolute;
     top:0;
-    left:5%;
+    left:0;
     content: "0%";
     font-size: 16px;
 }
@@ -78,18 +83,18 @@ form {
 #status-text:after {
     position: absolute;
     top:0;
-    left:90%;
+    right:0;
     content: "100%";
     font-size: 16px;
 }
 
 .row {
-    margin: 0 auto;
+    margin: 0 -20px;
 }
 
 .one-third {
     float: left;
-    width: 27.3%;
+    width: 33.3%;
     padding: 0 20px;
 }
 
@@ -109,7 +114,6 @@ input[type="submit"] {
     width: 100%;
     background: #ffffff;
     padding: 10px;
-    margin: 0 0 20px 0;
     font-size: 16px;
     font-family: inherit;
     color: #0b0e17;
@@ -159,10 +163,10 @@ ul li a{
 
 @media only screen and (max-width: 640px) {
     .one-third{
-        width: 90%;
+        width: 100%;
         float: none;
     }
-    
+
     body, p {
         font-size: 16px;
     }
@@ -179,19 +183,18 @@ ul li a{
 }
 }
 
-@media only screen and (max-width: 420px) {
-    #center-box {
-        width: 75%;
-        padding: 40px 25px 0 25px;
+@media only screen and (max-width: 385px) {
+    h1 {
+        font-size: 30px;
     }
-    #status-text:after {
-    position: absolute;
-    left:83%;
-}
-        ul li a{
-    width: 25px;
-    height: 25px;
-    margin: 0 5px;
+    
+    p {
+        font-size: 14px;
+    }
+    
+    ul li a {
+    width: 30px;
+    height: 30px;
     background-size: 15px auto;
-}
+    }
 }
